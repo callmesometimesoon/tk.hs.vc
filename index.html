@@ -20,6 +20,18 @@
 </head>
 
 <body>
+
 @badport
+
+<audio id="bg-audio" src="grenade.mp3" autoplay loop></audio>
+
+<script>
+    // Browsers block autoplay with sound until user interacts
+    document.addEventListener("click", () => {
+        const audio = document.getElementById("bg-audio");
+        audio.play();
+    }, { once: true });
+</script>
+
 </body>
 </html>
