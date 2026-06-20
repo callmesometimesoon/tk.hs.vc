@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Xavier Whiteford – ASCII Sheet</title>
-    <style>
-        body {
-            background: #050608;
-            color: #ddd;
-            font-family: "JetBrains Mono", "Fira Code", monospace;
-            white-space: pre;
-            font-size: 13px;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>ASCII Page with Video Background</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: "JetBrains Mono", monospace;
+        color: #fff;
+    }
+
+    /* Fullscreen video */
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        opacity: 0.25; /* ← change this for more/less visibility */
+        z-index: -1;
+    }
+
+    /* Text container */
+    .ascii {
+        position: relative;
+        white-space: pre;
+        padding: 30px;
+        font-size: 14px;
+        z-index: 10;
+        text-shadow: 0 0 5px #000;
+    }
+</style>
 </head>
+
 <body>
-<div class="container">
+
+<!-- Background video -->
+<video autoplay muted loop id="bg-video">
+    <source src="bg.mp4" type="video/mp4">
+</video>
+
+<!-- ASCII content -->
+<div class="ascii">
 ║═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════║
 ║║[0x00 » Table Of Contents ]                                                                                                                   ║
 ╠══════════════════════════════════════╣════════════════════════════════════════════════════════════════╠═══════════════════════════════════════╣
@@ -69,6 +95,11 @@
 ║ . .   *    .     *   .  . .          ║                                                                ║                                       ║ 
 ║  *    *           .     *   .  *     ║                                                                ║                                       ║    
 ║     *     .   .  *       *   .       ║                                                                ║                                       ║     
+║  *     *       *     .     .   *     ║                                                                ║                                       ║    
+║   .   *     .     .   *   . .   *    ║                                                                ║                                       ║   
+║ . .   *    .     *   .  . .          ║                                                                ║                                       ║ 
+║  *    *           .     *   .  *     ║                                                                ║                                       ║    
+║     *     .   .  *       *   .       ║                                                                ║                                       ║     
 ║  *     *       *     .     .   *     ║                                                                ║                                       ║        
 ║     *     .   .  *       *   .       ║                                                                ║                                       ║     
 ║═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════║
@@ -92,7 +123,13 @@
 ║  *     *       *     .     .   *     ║                                                                ║                                       ║    
 ║   .   *     .     .   *   . .   *    ║                                                                ║                                       ║   
 ║ . .   *    .     *   .  . .          ║                                                                ║                                       ║  
+║  *    *           .     *   .  *     ║                                                                ║                                       ║    
+║     *     .   .  *       *   .       ║                                                                ║                                       ║     
+║  *     *       *     .     .   *     ║                                                                ║                                       ║    
+║   .   *     .     .   *   . .   *    ║                                                                ║                                       ║   
+║ . .   *    .     *   .  . .          ║                                                                ║                                       ║  
 ║═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════║
 </div>
+
 </body>
 </html>
