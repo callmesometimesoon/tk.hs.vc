@@ -2,177 +2,51 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>;(</title>
+<title>@badport</title>
 
 <style>
     body {
         margin: 0;
         padding: 0;
+        background: black;
         overflow: hidden;
         font-family: monospace;
-        color: white;
     }
 
-    /* Background video */
-    #bg-video {
+    .wall {
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        object-fit: cover;
-        opacity: 0.35; /* adjust visibility */
-        z-index: -2;
-    }
 
-    .overlay-text {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 150px);
+        grid-auto-rows: 40px;
 
-        font-size: 22px;
-        line-height: 28px;
         color: rgba(255,255,255,0.15);
+        font-size: 22px;
+        line-height: 40px;
+        text-align: center;
 
-        white-space: pre-wrap;
-        overflow: hidden;
+        pointer-events: none;
+        user-select: none;
     }
 </style>
 </head>
 
 <body>
 
-<!-- Background video WITH SOUND -->
-<video autoplay loop playsinline id="bg-video">
-    <source src="bg.mp4" type="video/mp4">
-</video>
-
-<!-- Repeating text -->
-<div class="overlay-text">
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
-@badport @badport @badport @badport @badport @badport @badport @badport
+<div class="wall">
+    <!-- This auto-fills the entire screen -->
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
+    <div>@badport</div><div>@badport</div><div>@badport</div><div>@badport</div>
 </div>
 
 </body>
